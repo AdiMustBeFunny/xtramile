@@ -1,0 +1,16 @@
+<h2>Users</h2>
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let person of people">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{person.Person}}
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          This is a summary of the content
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+
+      <app-person-courses [personCourses]="person.Courses"></app-person-courses>
+
+    </mat-expansion-panel>
+  </mat-accordion>

@@ -1,0 +1,18 @@
+<mat-accordion>
+  <h2>Enrolled courses</h2>
+    <mat-expansion-panel *ngFor="let course of personCourses">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{course.Course}}
+        </mat-panel-title>
+        <mat-panel-description>
+          <span *ngIf="course.Projects.length > 1">
+            This course has been enrolled more than once
+          </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <!-- <p>List of all enrolled courses</p> -->
+      <!-- <app-person-courses [personCourses]="person.Courses"></app-person-courses> -->
+      <app-person-projects [personProjects]="course.Projects"></app-person-projects>
+    </mat-expansion-panel>
+  </mat-accordion>

@@ -1,0 +1,14 @@
+.completed{
+    background: rgb(0,152,110);
+    /* background: linear-gradient(180deg, rgba(0,152,110,1) 0%, rgba(255,255,255,1) 100%); */
+}
+
+.not-started{
+    background: rgb(250,163,0);
+    /* background: linear-gradient(180deg, rgba(250,163,0,1) 0%, rgba(255,255,255,1) 100%); */
+}
+
+.in-progress{
+    background: rgb(235,246,43);
+    /* background: linear-gradient(180deg, rgba(235,246,43,1) 0%, rgba(255,255,255,1) 100%); */
+}

@@ -1,0 +1,22 @@
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let project of personProjects" [ngClass]="{'not-started': courseNotStarted(project),
+    'completed' : courseCompleted(project),
+     'in-progress': courseInProgress(project) }">
+      <mat-expansion-panel-header >
+        <mat-panel-title>
+          {{project.Project}}
+        </mat-panel-title>
+        <mat-panel-description>
+          <span *ngIf="courseCompleted(project)">Course completed</span>
+          <span *ngIf="courseInProgress(project)">Course in progress</span>
+          <span *ngIf="courseNotStarted(project)">Course not started</span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>
+        This user has completed {{project.CompletedLessonsCount}} out of {{project.TotalLessonsCount}} lessons.
+      </p>
+      <p>
+        Opened lessons: {{project.OpenedLessonsCount}}
+      </p>
+    </mat-expansion-panel>
+  </mat-accordion>
